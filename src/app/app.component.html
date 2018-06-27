@@ -1,0 +1,20 @@
+<div>
+  <h2>Type-Ahead Search</h2>
+
+  <!-- pass the input value to the Subject  -->
+  <div class="search-field-container">
+  <input (input)="searchTerm$.next($event.target.value)" class="search-field" placeholder="SEARCH (Client Name / Policy Number)">
+  </div>
+
+  <div class="parent-container">
+    <div *ngFor="let client of clients; let i = index" [class]="getClientContainerClass(i)">
+      <div class="client-name-container">{{client.firstName}} {{client.lastName}}</div>
+      <div class="client-detail-container">
+        <div>{{client.phoneNumber}}</div>
+        <div>{{client.email}}</div>
+        <div>Policy No. {{client.policyNumber}}</div>
+      </div>
+    </div>
+  </div>
+
+</div>
