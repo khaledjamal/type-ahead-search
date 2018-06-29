@@ -56,14 +56,18 @@ export class ClientSearchService {
     let result = [];
 
     array.forEach(element => {
-      let name = element.firstName + " " + element.lastName + " " + element.email;
-      let lowerCaseName = name.toLowerCase();
-      let lowerCaseTerm = term.toLowerCase();
-      if (lowerCaseName.indexOf(lowerCaseTerm) != -1)
+      if (this.elementContainsTerm(element, term))
         result.push(element);
     });
 
     return result;
   }
 
+  elementContainsTerm(element:Client, term: string) {
+    let name = element.firstName + " " + element.lastName + " " + element.email;
+    let lowerCaseName = name.toLowerCase();
+    let lowerCaseTerm = term.toLowerCase();
+    let result = lowerCaseName.indexOf(lowerCaseTerm) != -1;
+    return result;
+  }
 }
