@@ -1,27 +1,48 @@
+.header {
+    margin-bottom: 15px;
+}
+
 .search-field-container {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: stretch;
-    background-color:black;
+    background-color:#443F5D;
 
     padding-right: 10px;
     padding-left: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     padding-top: 10px;
+
+    width: 98%;
+    /* margin-right: 5px; */
 
 }
 .search-field {
-    background-color:black;
+    background-color:#443F5D;
     color: white;
-    width: 100%;
+    width: 380px;
 
     padding-right: 0px;
     padding-left: 0px;
     padding-bottom: 0px;
     padding-top: 0px;
 
-    font-size: 20px;
+    font-size: 12px;
+
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+
+    /* border-bottom-width: 1px; */
+    border-bottom: 1px solid gray;
+}
+
+/*https://www.jotform.com/answers/942964-Changing-the-active-focus-border-color-of-the-input-field*/
+input:focus {
+    border-color:#443F5D;
+    border-bottom: 1px solid gray;
+    outline-style: none;
 }
 
 .client-container {
@@ -52,8 +73,8 @@
   }
 
   .client-name-container {
-      font-size: 20px;
-      margin-top: 5px;
+      font-size: 18px;
+      margin-top: 0px;
       margin-bottom: 5px;
       margin-right: 10px;
       margin-left: 10px;
@@ -64,6 +85,10 @@
       padding-top: 0px;
   }
 
+  .client-container {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
   .client-container-even {
       background-color: lightgray;
   }
@@ -72,3 +97,23 @@
     background-color: white;
 }
 
+.phone-icon {
+    font-size:12px;
+    margin-right:5px;
+}
+
+.file-icon {
+    font-size:10px;
+    margin-right:5px
+}
+
+.at-sign-icon {
+    font-size:11px;
+    margin-right:2px;
+}
+
+.search-icon {
+    font-size: 18px;
+    color: gray;
+    margin-right: 10px;
+}

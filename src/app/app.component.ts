@@ -33,8 +33,8 @@ export class AppComponent implements OnInit {
   }
 
   getClientContainerClass(i) {
-    let evenOrOdd = this.isEven(i) ? "even" : "odd";
-    let result = "client-container-" + evenOrOdd;
+    let evenOrOdd = this.isEven(i+1) ? "even" : "odd";
+    let result = "client-container client-container-" + evenOrOdd;
     return result ;
   }
 
