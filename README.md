@@ -1,4 +1,4 @@
-# Type-Ahead Search Field
+# Type-Ahead Search
 
 This is a web application that demonstrates the use of an interactive type-ahead search field. It enables the user to type a search keyword then immediately see results, without requiring the user to press the "Enter" key or click a button.
 
