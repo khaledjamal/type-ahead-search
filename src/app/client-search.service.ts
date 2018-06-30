@@ -39,10 +39,13 @@ export class ClientSearchService {
     return terms
       .debounceTime(debounceMillis)
       .distinctUntilChanged()
-      .switchMap(term => this.rawsearch(term));
+      .switchMap(term => this.searchData(term));
   }
 
-  rawsearch(term: string): Observable<Client[]> {
+  searchData(term: string): Observable<Client[]> {
+    if (term.trim().length == 0)
+      return ArrayObservable.of([]);
+
     let filteredResults = this.filterClientData(this.data.clientData, term);
 
     console.log("this.data.clientData: " + JSON.stringify(this.data.clientData));
@@ -64,10 +67,10 @@ export class ClientSearchService {
   }
 
   elementContainsTerm(element:Client, term: string) {
-    let name = element.firstName + " " + element.lastName + " " + element.email;
-    let lowerCaseName = name.toLowerCase();
+    let textToSearch = element.firstName + " " + element.lastName + " " + element.email;
+    let lowerCaseTextToSearch = textToSearch.toLowerCase();
     let lowerCaseTerm = term.toLowerCase();
-    let result = lowerCaseName.indexOf(lowerCaseTerm) != -1;
+    let result = lowerCaseTextToSearch.indexOf(lowerCaseTerm) != -1;
     return result;
   }
 }
