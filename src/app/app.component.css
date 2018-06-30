@@ -1,6 +1,9 @@
 .header {
     margin-bottom: 15px;
 }
+.outmost-container{
+    width: 98%;
+}
 
 .search-field-container {
     display: flex;
@@ -16,8 +19,8 @@
 
     width: 98%;
     /* margin-right: 5px; */
-
 }
+
 .search-field {
     background-color:#443F5D;
     color: white;
@@ -45,21 +48,26 @@ input:focus {
     outline-style: none;
 }
 
+.parent-container {
+    display:block;
+    position:absolute;
+    width: 96%;
+    border: 2px solid #443F5D;
+}
+
 .client-container {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
   }
 
-  .client-detail-container {
+.client-detail-container {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-  }
+}
 
-
-
-  .client-detail-container > div {
+.client-detail-container > div {
     margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 10px;
@@ -70,33 +78,50 @@ input:focus {
     padding-bottom: 0px;
     padding-top: 0px;
     font-size: 13px;
-  }
+}
 
-  .client-name-container {
-      font-size: 18px;
-      margin-top: 0px;
-      margin-bottom: 5px;
-      margin-right: 10px;
-      margin-left: 10px;
+.client-name-container {
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
 
-      padding-right: 20px;
-      padding-left: 20px;
-      padding-bottom: 0px;
-      padding-top: 0px;
-  }
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    white-space: nowrap;
+}
 
-  .client-container {
+.client-container {
     padding-bottom: 10px;
     padding-top: 10px;
-  }
+}
+
+.client-email {
+    min-width: 200px;
+}
+.client-phone-number {
+    min-width: 130px;
+}
+
+.client-policy-number {
+    white-space:nowrap
+}
+
   .client-container-even {
       background-color: lightgray;
   }
 
   .client-container-odd {
     background-color: white;
-}
+  }
 
+
+.client-email {
+    min-width: 200px;
+}
 .phone-icon {
     font-size:12px;
     margin-right:5px;
