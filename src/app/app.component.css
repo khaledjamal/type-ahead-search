@@ -53,6 +53,7 @@ input:focus {
     position:absolute;
     width: 96%;
     border: 2px solid #443F5D;
+    overflow-x: auto;
 }
 
 .client-container {
